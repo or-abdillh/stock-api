@@ -16,5 +16,8 @@ module.exports = (app) => {
       .get(controller.index)
       
    //Authentication
-   app.route('/auth').post(controller.auth)
+   app.route('/auth').post(controller.auth);
+   
+   //Validation TOKEN
+   app.route('/token').post(controller.token);
 }

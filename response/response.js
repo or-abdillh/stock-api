@@ -24,6 +24,11 @@ const success = (values, res) => {
   setResponse(setData(200, 'success' ,values), res);
 }
 
+//Internal server error
+const serverError = (values, res) => {
+   setResponse(setData(501, 'Internal Server error', values), res);
+}
+
 //Authentication is success
 const authSuccess = (values, res) => {
    setResponse(setData(200, 'Auth Success', values), res)
