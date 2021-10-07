@@ -3,6 +3,7 @@
 var response = require('../response/response.js');
 var connection = require('../connection/conn.js');
 var saveToken = require('../utils/saveToken.js');
+var randomToken = require('random-token').create('AOsphuiTRYEP0342156v');
 
 //INDEX
 const index = (req, res) => {
@@ -21,12 +22,13 @@ const auth = (req, res) => {
    connection.query(sql, (err, rows, fields) => {
       if (err) throw err;
       //Validation action
-      
       if ( rows.length > 0 ) {
+         //Generate random token here
+         const TOKEN = randomToken(50);
          //Save information about the succes Authentication in cookie
-         res.cookie('TOKEN', 'uyguuY34Y3ye43546');
+         res.cookie('TOKEN', TOKEN);
          //Save information about the succes Authentication into Table User
-         saveToken(connection, 'uyguuY34Y3ye43546', username);
+         saveToken(connection, TOKEN, username);
          //Make a response
          response.authSuccess('Authentication valid', res);
       } else {
