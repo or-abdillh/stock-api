@@ -14,20 +14,22 @@ const auth = (req, res) => {
    //Query to DB
    connection.query(sql, (err, rows, fields) => {
       if (err) response.serverError('MySql Error', res);
-      //Validation action
-      if ( rows.length > 0 ) {
-         //Generate random token here
-         const TOKEN = randomToken(50);
-         //Save information about the succes Authentication in cookie
-         //Set expiration time 1 hours
-         res.cookie('TOKEN', TOKEN, {maxAge: 3600000});
-         //Save information about the succes Authentication into Table User
-         saveToken(connection, TOKEN, username);
-         //Make a response
-         console.log('Auth success')
-         response.success('Authentication valid', res);
-      } else {
-         response.forbidden('Authentication invalid, username or password cannot find on Database', res);
+      else {
+         //Validation action
+         if ( rows.length > 0 ) {
+            //Generate random token here
+            const TOKEN = randomToken(50);
+            //Save information about the succes Authentication in cookie
+            //Set expiration time 1 hours
+            res.cookie('TOKEN', TOKEN, {maxAge: 3600000});
+            //Save information about the succes Authentication into Table User
+            saveToken(connection, TOKEN, username);
+            //Make a response
+            console.log('Auth success')
+            response.success('Authentication valid', res);
+         } else {
+            response.forbidden('Authentication invalid, username or password cannot find on Database', res);
+         }
       }
    })  
 }

@@ -17,5 +17,6 @@ routes(app);
 
 app.listen(port, () => {
    console.log('Stock App backend service')
+   console.log(`Start time : ${new Date()}`);
    console.log(`Server running at http://localhost:${port}/`);
 });

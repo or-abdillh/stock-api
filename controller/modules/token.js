@@ -11,13 +11,14 @@ const token = (req, res) => {
    const sql = `SELECT * FROM User WHERE username = "${username}" AND token = "${TOKEN}"`;
    connection.query(sql, (err, rows, fields) => {
       if (err) response.serverError('MySql Error', res);
-      
-      //validation action
-      if ( rows.length > 0 ) {
-         response.success('TOKEN valid', res);
-      } else {
-         response.forbidden('TOKEN invalid', res);
-      }   
+      else {
+         //validation action
+         if ( rows.length > 0 ) {
+            response.success('TOKEN valid', res);
+         } else {
+            response.forbidden('TOKEN invalid', res);
+         }
+      }
    })
 }
 

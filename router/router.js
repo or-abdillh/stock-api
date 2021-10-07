@@ -23,4 +23,7 @@ module.exports = (app) => {
    
    //Logout handler
    app.route('/logout').post(controller.logout);
+   
+   //Get profile information
+   app.route('/profile').post(controller.getProfile);
 }

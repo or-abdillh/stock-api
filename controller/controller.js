@@ -16,10 +16,14 @@ const token = require('./modules/token.js');
 //Logout handler
 const logout = require('./modules/logout.js');
 
+//Get profile
+const getProfile = require('./modules/getProfile.js');
+
 //Exports
 module.exports = {
    index,
    auth,
    token,
-   logout
+   logout,
+   getProfile
 }
