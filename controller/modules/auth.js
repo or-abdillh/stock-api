@@ -24,9 +24,10 @@ const auth = (req, res) => {
          //Save information about the succes Authentication into Table User
          saveToken(connection, TOKEN, username);
          //Make a response
-         response.authSuccess('Authentication valid', res);
+         console.log('Auth success')
+         response.success('Authentication valid', res);
       } else {
-         response.authInvalid('Authentication invalid, username or password cannot find on Database', res);
+         response.forbidden('Authentication invalid, username or password cannot find on Database', res);
       }
    })  
 }

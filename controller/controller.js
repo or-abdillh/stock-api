@@ -1,6 +1,6 @@
  'use strict';
 
-var response = require('../response/response.js');
+const response = require('../response/response.js');
 //INDEX
 const index = (req, res) => {
    response.success('API Sukses berjalan dengan baik', res)
@@ -8,12 +8,18 @@ const index = (req, res) => {
 
 //Modules
 //Authentication
-var auth = require('./modules/auth.js');
-var token = require('./modules/token.js');
+const auth = require('./modules/auth.js');
+
+//Validation TOKEN
+const token = require('./modules/token.js');
+
+//Logout handler
+const logout = require('./modules/logout.js');
 
 //Exports
 module.exports = {
    index,
    auth,
-   token
+   token,
+   logout
 }

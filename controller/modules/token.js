@@ -16,7 +16,7 @@ const token = (req, res) => {
       if ( rows.length > 0 ) {
          response.success('TOKEN valid', res);
       } else {
-         response.authInvalid('TOKEN invalid', res);
+         response.forbidden('TOKEN invalid', res);
       }   
    })
 }

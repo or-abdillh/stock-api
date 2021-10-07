@@ -20,4 +20,7 @@ module.exports = (app) => {
    
    //Validation TOKEN
    app.route('/token').post(controller.token);
+   
+   //Logout handler
+   app.route('/logout').post(controller.logout);
 }
