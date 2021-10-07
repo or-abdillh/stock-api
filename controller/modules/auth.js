@@ -2,12 +2,13 @@ var connection = require('../../connection/conn.js');
 var response = require('../../response/response.js');
 var saveToken = require('../../utils/saveToken.js');
 var randomToken = require('random-token').create('AOsphuiTRYEP0342156v');
+var md5 = require('md5');
 
 //Authentication
 const auth = (req, res) => {
    //Get params
    const username = req.body.username;
-   const password = req.body.password;
+   const password = md5(req.body.password);
    const sql = `SELECT * FROM User WHERE 
       username = "${username}" AND 
       password = "${password}"`;
