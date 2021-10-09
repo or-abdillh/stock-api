@@ -5,10 +5,10 @@ var response = require('../../response/response.js');
 const token = (req, res) => {
    //Get data from body
    const TOKEN = req.body.TOKEN;
-   const username = req.body.username;
+   console.log(TOKEN)
    
    //Query to DB
-   const sql = `SELECT * FROM User WHERE username = "${username}" AND token = "${TOKEN}"`;
+   const sql = `SELECT * FROM User WHERE token = "${TOKEN}"`;
    connection.query(sql, (err, rows, fields) => {
       if (err) response.serverError('MySql Error', res);
       else {
