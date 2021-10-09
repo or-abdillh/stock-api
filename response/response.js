@@ -9,7 +9,6 @@ const setData = (status, message, values) => {
 } 
 
 const setResponse = (data, res) => {
-   
    res.status(200);
    res.json(data);
    res.end();
