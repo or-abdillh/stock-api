@@ -8,14 +8,13 @@ var tokenValidation = require('../../utils/tokenValidation.js');
 const getProfile = (req, res) => {
    //Get data from body
    const body = {
-      TOKEN: req.body.TOKEN,
-      username: req.body.username
+      TOKEN: req.body.TOKEN
    }
    
    //Create method for query
    const queryProfile = token => {
       //Query SQL
-      const sql = `SELECT * FROM User WHERE username = "${body.username}"`;
+      const sql = `SELECT fullname FROM User WHERE token = "${body.TOKEN}"`;
       
       //Validation
       if ( token ) {

@@ -1,7 +1,7 @@
 var connection = require('../../connection/conn.js');
 var response = require('../../response/response.js');
 var saveToken = require('../../utils/saveToken.js');
-var randomToken = require('random-token').create('gGlLopPxZnoMpYyAaDeE1234567890&_%');
+var randomToken = require('random-token').create('gGlLopPxZnoMpYyAaDeE1390&_');
 var md5 = require('md5');
 
 //Authentication

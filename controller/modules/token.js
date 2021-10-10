@@ -5,7 +5,6 @@ var response = require('../../response/response.js');
 const token = (req, res) => {
    //Get data from body
    const TOKEN = req.body.TOKEN;
-   console.log(TOKEN)
    
    //Query to DB
    const sql = `SELECT * FROM User WHERE token = "${TOKEN}"`;
@@ -14,6 +13,7 @@ const token = (req, res) => {
       else {
          //validation action
          if ( rows.length > 0 ) {
+            console.log('TOKEN valid')
             response.success('TOKEN valid', res);
          } else {
             response.forbidden('TOKEN invalid', res);

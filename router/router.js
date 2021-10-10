@@ -22,7 +22,7 @@ module.exports = (app) => {
    app.route('/token').post(controller.token);
    
    //Logout handler
-   app.route('/logout').post(controller.logout);
+   app.route('/logout').get(controller.logout);
    
    //Get profile information
    app.route('/profile').post(controller.getProfile);
