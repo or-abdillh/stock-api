@@ -26,4 +26,7 @@ module.exports = (app) => {
    
    //Get profile information
    app.route('/profile').post(controller.getProfile);
+   
+   //Get All Products
+   app.route('/products').post(controller.getProducts)
 }

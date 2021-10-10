@@ -19,11 +19,15 @@ const logout = require('./modules/logout.js');
 //Get profile
 const getProfile = require('./modules/getProfile.js');
 
+//Get all products
+const getProducts = require('./modules/getProducts.js');
+
 //Exports
 module.exports = {
    index,
    auth,
    token,
    logout,
-   getProfile
+   getProfile,
+   getProducts
 }

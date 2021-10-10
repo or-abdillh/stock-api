@@ -12,6 +12,9 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(cookieParser());
 
+//Make upload folder publically available
+app.use('/public', express.static('public'));
+
 //Routing
 routes(app);
 
