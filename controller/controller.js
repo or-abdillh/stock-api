@@ -25,6 +25,9 @@ const getProducts = require('./modules/getProducts.js');
 //Upload API
 const upload = require('./modules/upload.js');
 
+//Create new product
+const createProduct = require('./modules/createProduct.js');
+
 //Exports
 module.exports = {
    index,
@@ -33,5 +36,6 @@ module.exports = {
    logout,
    getProfile,
    getProducts,
-   upload
+   upload,
+   createProduct
 }

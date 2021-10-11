@@ -4,7 +4,7 @@ var response = require('../../response/response.js');
 //import utils for TOKEN validation
 var tokenValidation = require('../../utils/tokenValidation.js');
 
-//Get profile 
+//Get product 
 const getProducts = (req, res) => {
    //Get data from body
    const body = {

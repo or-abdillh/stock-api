@@ -31,4 +31,7 @@ module.exports = (app) => {
    
    //Post image product
    app.route('/upload').post(controller.upload);  
+   
+   //Create new product
+   app.route('/createProduct').post(controller.createProduct);
 }
