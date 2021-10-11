@@ -22,6 +22,9 @@ const getProfile = require('./modules/getProfile.js');
 //Get all products
 const getProducts = require('./modules/getProducts.js');
 
+//Upload API
+const upload = require('./modules/upload.js');
+
 //Exports
 module.exports = {
    index,
@@ -29,5 +32,6 @@ module.exports = {
    token,
    logout,
    getProfile,
-   getProducts
+   getProducts,
+   upload
 }

@@ -12,8 +12,7 @@ module.exports = (app) => {
    });
 
    //INDEX
-   app.route('/')
-      .get(controller.index)
+   app.route('/').get(controller.index)
       
    //Authentication
    app.route('/auth').post(controller.auth);
@@ -28,5 +27,8 @@ module.exports = (app) => {
    app.route('/profile').post(controller.getProfile);
    
    //Get All Products
-   app.route('/products').post(controller.getProducts)
+   app.route('/products').post(controller.getProducts);
+   
+   //Post image product
+   app.route('/upload').post(controller.upload);  
 }

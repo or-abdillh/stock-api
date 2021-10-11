@@ -1,16 +1,16 @@
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
-const routes = require('./router/router.js');
 const cors = require('cors');
-const cookieParser = require('cookie-parser'); 
+const fileUpload = require('express-fileupload');
+const routes = require('./router/router.js');
 const app = express();
 const port = 8080;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(cookieParser());
+app.use(fileUpload());
 
 //Make upload folder publically available
 app.use('/public', express.static('public'));
