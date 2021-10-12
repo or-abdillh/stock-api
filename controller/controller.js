@@ -28,6 +28,9 @@ const upload = require('./modules/upload.js');
 //Create new product
 const createProduct = require('./modules/createProduct.js');
 
+//Remove File upload product
+const remove = require('./modules/removeImage.js');
+
 //Exports
 module.exports = {
    index,
@@ -37,5 +40,6 @@ module.exports = {
    getProfile,
    getProducts,
    upload,
-   createProduct
+   createProduct,
+   remove
 }
