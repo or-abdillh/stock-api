@@ -37,4 +37,7 @@ module.exports = (app) => {
    
    //Remove file upload product
    app.route('/removeImage').post(controller.remove);
+   
+   //Delete product from table Productss
+   app.route('/deleteProduct').post(controller.deleteProduct);
 }
