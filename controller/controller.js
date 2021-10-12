@@ -34,6 +34,9 @@ const remove = require('./modules/removeImage.js');
 //Delete product from table
 const deleteProduct = require('./modules/deleteProduct.js');
 
+//Update product from table
+const updateProduct = require('./modules/updateProduct.js');
+
 //Exports
 module.exports = {
    index,
@@ -45,5 +48,6 @@ module.exports = {
    upload,
    createProduct,
    remove,
-   deleteProduct
+   deleteProduct,
+   updateProduct
 }

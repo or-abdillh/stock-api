@@ -19,7 +19,7 @@ const deleteProduct = (req, res) => {
    const body = { TOKEN: req.body.TOKEN };
    const key = req.body.id_product;
    const path = req.body.image_product;
-   
+   console.log(req.body)
    //Create name file
    //http://localhost:8080/public/product-1634004243760.png
    let file = path.split('/');
