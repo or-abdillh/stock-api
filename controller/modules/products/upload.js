@@ -1,5 +1,5 @@
 //Upload file API
-var response = require('../../response/response.js')
+var response = require('../../../response/response.js')
 
 const upload = (req, res) => {
    

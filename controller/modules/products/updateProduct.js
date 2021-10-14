@@ -1,7 +1,7 @@
 //Update product
-var connection = require('../../connection/conn.js');
-var response = require('../../response/response.js');
-var tokenValidation = require('../../utils/tokenValidation.js');
+var connection = require('../../../connection/conn.js');
+var response = require('../../../response/response.js');
+var tokenValidation = require('../../../utils/tokenValidation.js');
 
 const updateProduct = (req, res) => {
    //Get data from body

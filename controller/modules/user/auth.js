@@ -1,6 +1,6 @@
-var connection = require('../../connection/conn.js');
-var response = require('../../response/response.js');
-var saveToken = require('../../utils/saveToken.js');
+var connection = require('../../../connection/conn.js');
+var response = require('../../../response/response.js');
+var saveToken = require('../../../utils/saveToken.js');
 var randomToken = require('random-token').create('13507pOiUYtRZxCvBnM_%');
 var md5 = require('md5');
 

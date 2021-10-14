@@ -1,8 +1,8 @@
-var connection = require('../../connection/conn.js');
-var response = require('../../response/response.js');
+var connection = require('../../../connection/conn.js');
+var response = require('../../../response/response.js');
 
 //import utils for TOKEN validation
-var tokenValidation = require('../../utils/tokenValidation.js');
+var tokenValidation = require('../../../utils/tokenValidation.js');
 
 //Get profile 
 const getProfile = (req, res) => {

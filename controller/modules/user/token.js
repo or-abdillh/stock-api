@@ -1,5 +1,5 @@
-var connection = require('../../connection/conn.js');
-var response = require('../../response/response.js');
+var connection = require('../../../connection/conn.js');
+var response = require('../../../response/response.js');
 
 //Token validation
 const token = (req, res) => {

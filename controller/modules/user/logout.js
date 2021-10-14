@@ -1,5 +1,5 @@
-var connection = require('../../connection/conn.js');
-var response = require('../../response/response.js');
+var connection = require('../../../connection/conn.js');
+var response = require('../../../response/response.js');
 var randomToken = require('random-token').create('gGlLopPxZnoMpYyAaDeE1390&_');
 
 //Logout handler

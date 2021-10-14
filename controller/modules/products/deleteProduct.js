@@ -1,7 +1,7 @@
 //API for delete record from table product
-var connection = require('../../connection/conn.js');
-var response = require('../../response/response.js');
-var tokenValidation = require('../../utils/tokenValidation.js');
+var connection = require('../../../connection/conn.js');
+var response = require('../../../response/response.js');
+var tokenValidation = require('../../../utils/tokenValidation.js');
 var fs = require('fs');
 
 //Remove file
