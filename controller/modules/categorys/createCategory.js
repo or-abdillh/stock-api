@@ -3,26 +3,27 @@ var connection = require('../../../connection/conn.js');
 var response = require('../../../response/response.js');
 var tokenValidation = require('../../../utils/tokenValidation.js');
 
-const getCategorys = (req, res) => {
+const createCategory = (req, res) => {
    //Get TOKEN
    const body = { TOKEN : req.body.TOKEN };
    
-   //Create SQL
-   const sql = 'SELECT id_category, category FROM Categorys';
+   //Get data
+   const theName = req.body.category
+   const createAt = new Date().getTime()
    
-   const categorys = token => {
+   //Create SQL
+   const sql = `INSERT INTO Categorys VALUES (${null}, "${theName}", "${createAt}")`;
+   
+   const create = token => {
       if (token) {
          connection.query(sql, (err, rows, fields) => {
             if (err) response.serverError(err, res);
-            else {
-               if (rows.length === 0) response.success('Empty record given', res);
-               else response.success(rows, res);
-            }
+            else response.success("Create new category success", res);
          })
       } else response.forbidden('TOKEN invalid', res);
    }
    
-   tokenValidation(connection, body, categorys);
+   tokenValidation(connection, body, create);
 }
 
-module.exports = getCategorys;
+module.exports = createCategory;
