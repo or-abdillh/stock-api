@@ -1,4 +1,4 @@
-//API get all category from table Categorys
+//Create category into table Categorys
 var connection = require('../../../connection/conn.js');
 var response = require('../../../response/response.js');
 var tokenValidation = require('../../../utils/tokenValidation.js');

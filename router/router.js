@@ -42,4 +42,7 @@ module.exports = (app) => {
    
    //Create new category
    app.route('/createCategory').post(controller.createCategory);
+   
+   //Delete category from table
+   app.route('/deleteCategory').post(controller.deleteCategory);
 }

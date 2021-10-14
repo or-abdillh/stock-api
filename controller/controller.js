@@ -43,6 +43,9 @@ const getCategorys = require('./modules/categorys/getCategorys.js');
 //Create new category
 const createCategory = require('./modules/categorys/createCategory.js');
 
+//Delete category from table
+const deleteCategory = require('./modules/categorys/deleteCategory.js');
+
 //Exports
 module.exports = {
    index,
@@ -57,5 +60,6 @@ module.exports = {
    deleteProduct,
    updateProduct,
    getCategorys,
-   createCategory
+   createCategory,
+   deleteCategory
 }
