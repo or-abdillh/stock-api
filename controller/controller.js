@@ -37,6 +37,9 @@ const deleteProduct = require('./modules/products/deleteProduct.js');
 //Update product from table
 const updateProduct = require('./modules/products/updateProduct.js');
 
+//Get all category from Categorys tabel
+const getCategorys = require('./modules/categorys/getCategorys.js');
+
 //Exports
 module.exports = {
    index,
@@ -49,5 +52,6 @@ module.exports = {
    createProduct,
    remove,
    deleteProduct,
-   updateProduct
+   updateProduct,
+   getCategorys
 }
