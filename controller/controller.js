@@ -49,6 +49,9 @@ const deleteCategory = require('./modules/categorys/deleteCategory.js');
 //Set category product to uncategorys
 const setUncategorys = require('./modules/products/setUncategorys.js');
 
+//Update category
+const updateCategory = require('./modules/categorys/updateCategory.js');
+
 //Exports
 module.exports = {
    index,
@@ -65,5 +68,6 @@ module.exports = {
    getCategorys,
    createCategory,
    deleteCategory,
-   setUncategorys
+   setUncategorys,
+   updateCategory
 }

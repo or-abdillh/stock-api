@@ -48,4 +48,7 @@ module.exports = (app) => {
    
    //Set category product to uncategorys
    app.route('/setUncategorys').post(controller.setUncategorys);
+   
+   //Update category
+   app.route('/updateCategory').post(controller.updateCategory);
 }
