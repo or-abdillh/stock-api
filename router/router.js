@@ -45,4 +45,7 @@ module.exports = (app) => {
    
    //Delete category from table
    app.route('/deleteCategory').post(controller.deleteCategory);
+   
+   //Set category product to uncategorys
+   app.route('/setUncategorys').post(controller.setUncategorys);
 }
