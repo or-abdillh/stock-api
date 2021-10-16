@@ -24,8 +24,8 @@ const getProfile = (req, res) => {
             //Make response
             response.success({
                fullname: rows[0][0].fullname,
-               categorys: rows[1].length,
-               products: rows[2].length
+               products: rows[1].length,
+               categorys: rows[2].length
             }, res);
             
          })
