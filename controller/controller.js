@@ -52,6 +52,9 @@ const setUncategorys = require('./modules/products/setUncategorys.js');
 //Update category
 const updateCategory = require('./modules/categorys/updateCategory.js');
 
+//Search products by name_product and category_product
+const searchProducts = require('./modules/products/searchProducts.js');
+
 //Exports
 module.exports = {
    index,
@@ -69,5 +72,6 @@ module.exports = {
    createCategory,
    deleteCategory,
    setUncategorys,
-   updateCategory
+   updateCategory,
+   searchProducts
 }

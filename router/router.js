@@ -51,4 +51,7 @@ module.exports = (app) => {
    
    //Update category
    app.route('/updateCategory').post(controller.updateCategory);
+   
+   //Search products by name_product and category_product
+   app.route('/search').post(controller.searchProducts);
 }
