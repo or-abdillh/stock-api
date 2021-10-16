@@ -14,7 +14,7 @@ const getProducts = (req, res) => {
    //Create method for query
    const queryProducts = token => {
       //Query SQL
-      const sql = `SELECT * FROM Products`;
+      const sql = `SELECT * FROM Products ORDER BY last_modified DESC`;
       
       //Validation
       if ( token ) {

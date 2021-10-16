@@ -16,7 +16,7 @@ const searchProducts = (req, res) => {
    
    //Create SQL 
    let sql = `SELECT * FROM Products WHERE name_product LIKE "%${keyword}%"`;
-   if ( category_product !== 'all' ) {
+   if ( category_product !== 'All' ) {
       sql +=  ` AND category_product = "${category_product}"`;
    }
    
