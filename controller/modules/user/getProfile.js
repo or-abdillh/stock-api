@@ -14,14 +14,20 @@ const getProfile = (req, res) => {
    //Create method for query
    const queryProfile = token => {
       //Query SQL
-      const sql = `SELECT fullname FROM User WHERE token = "${body.TOKEN}"`;
+      const sql = `SELECT fullname FROM User WHERE token = "${body.TOKEN}"; 
+         SELECT id_product FROM Products; SELECT id_category FROM Categorys`;
       
       //Validation
       if ( token ) {
          connection.query(sql, (err, rows, fields) => {
             if (err) response.serverError('MySql Error', res);
             //Make response
-            response.success(rows, res);
+            response.success({
+               fullname: rows[0][0].fullname,
+               categorys: rows[1].length,
+               products: rows[2].length
+            }, res);
+            
          })
       } else {
          response.forbidden('Token invalid', res);

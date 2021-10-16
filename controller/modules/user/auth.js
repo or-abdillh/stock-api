@@ -25,7 +25,7 @@ const auth = (req, res) => {
             //Send the token to client to save into cookie
             //Make a response
             console.log('Auth success')
-            response.success(TOKEN, res);
+            response.success({ TOKEN }, res);
          } else {
             response.forbidden('Authentication invalid, username or password cannot find on Database', res);
          }
