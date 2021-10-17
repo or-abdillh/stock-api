@@ -1,0 +1,30 @@
+//change password
+var connection = require('../../../connection/conn.js');
+var response = require('../../../response/response.js');
+var md5 = require('md5');
+
+//import utils for TOKEN validation
+var tokenValidation = require('../../../utils/tokenValidation.js');
+
+const changePassword = (req, res) => {
+   //Create body and get data
+   const body = { TOKEN: req.body.TOKEN };
+   const newPassword = md5(req.body.new_password);
+   
+   //Create sql 
+   const sql = `UPDATE User SET password = "${newPassword}" WHERE token = "${body.TOKEN}"`;
+   
+   const change = token => {
+      //token valid
+      if (token) {
+         connection.query(sql, (err, rows, fields) => {
+            if (err) response.serverError(err, res);
+            else response.success('Success to change password', res);
+         })
+      } else response.forbidden('TOKEN invalid');
+   }
+   
+   tokenValidation(connection, body, change);
+}
+
+module.exports = changePassword;

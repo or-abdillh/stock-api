@@ -58,6 +58,9 @@ const searchProducts = require('./modules/products/searchProducts.js');
 //change fullname
 const changeName = require('./modules/user/changeName.js');
 
+//change password
+const changePassword = require('./modules/user/changePassword.js');
+
 //Exports
 module.exports = {
    index,
@@ -77,5 +80,6 @@ module.exports = {
    setUncategorys,
    updateCategory,
    searchProducts,
-   changeName
+   changeName,
+   changePassword
 }

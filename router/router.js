@@ -57,4 +57,7 @@ module.exports = (app) => {
    
    //Change fullname
    app.route('/changeName').post(controller.changeName);
+   
+   //change password
+   app.route('/changePassword').post(controller.changePassword);
 }
