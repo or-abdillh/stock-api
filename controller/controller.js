@@ -55,6 +55,9 @@ const updateCategory = require('./modules/categorys/updateCategory.js');
 //Search products by name_product and category_product
 const searchProducts = require('./modules/products/searchProducts.js');
 
+//change fullname
+const changeName = require('./modules/user/changeName.js');
+
 //Exports
 module.exports = {
    index,
@@ -73,5 +76,6 @@ module.exports = {
    deleteCategory,
    setUncategorys,
    updateCategory,
-   searchProducts
+   searchProducts,
+   changeName
 }

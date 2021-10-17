@@ -54,4 +54,7 @@ module.exports = (app) => {
    
    //Search products by name_product and category_product
    app.route('/search').post(controller.searchProducts);
+   
+   //Change fullname
+   app.route('/changeName').post(controller.changeName);
 }

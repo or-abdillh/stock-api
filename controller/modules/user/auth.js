@@ -1,7 +1,7 @@
 var connection = require('../../../connection/conn.js');
 var response = require('../../../response/response.js');
 var saveToken = require('../../../utils/saveToken.js');
-var randomToken = require('random-token').create('13507pOiUYtRZxCvBnM_%');
+var randomToken = require('random-token');
 var md5 = require('md5');
 
 //Authentication
@@ -19,7 +19,7 @@ const auth = (req, res) => {
          //Validation action
          if ( rows.length > 0 ) {
             //Generate random token here
-            const TOKEN = randomToken(50);
+            const TOKEN = randomToken(100);
             //Save information about the succes Authentication into Table User
             saveToken(connection, TOKEN, username);
             //Send the token to client to save into cookie
