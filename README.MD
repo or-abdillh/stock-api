@@ -17,106 +17,106 @@ Built with Node JS, Express JS and MySql
 
 ### Run server
 This application running on PORT 3000
-- <code>cd stock-api && npm start</code>
+- <code>cd stock-api &&  <br>npm start</code>
 
 ### Hostname & Endpoint API
-- HOSTNAME : <code>http://localhost:3000/endpoint</code>
-
+- HOSTNAME : <code>http://loc <br>alhost <br>:3000/</code>
+ <br>
 ##### endpoint
-- <code>/auth</code>
-purpose : login validation
-request method <code>POST</code>
-request body : <code>{ TOKEN: xxx, username: xxx, password: xxx }</code>
+- <code>/auth</code> <br>
+purpo <br>se : login validation <br>
+request method <code>POST</ <br>code> <br>
+request body : <code>{ TOKEN: xxx, username: xxx, p <br>assword: xxx }</code>
 
-- <code>/token</code>
-purpose : Token validation
-request method <code>POST</code>
+- <code>/token</code> <br>
+purpose : Token validation <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx }</code>
 
-- <code>/logout</code>
-purpose : Remove TOKEN and create new TOKEN to table User
+- <code>/logout</code> <br>
+purpose : Remove TOKEN and create new TOKEN to table User <br>
 request method <code>GET</code>
 
-- <code>/profile</code>
-purpose : Get fullname, amounts of category and products user have
-request method <code>POST</code>
+- <code>/profile</code> <br>
+purpose : Get fullname, amounts of category and products user have <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx }</code>
 
-- <code>/products</code>
-purpose : Get all products from table Products
-request method <code>POST</code>
+- <code>/products</code> <br>
+purpose : Get all products from table Products <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx }</code>
 
-- <code>/upload</code>
-purpose : Upload image to server, path uploaded file <code>/public</code>
-request method <code>POST</code>
+- <code>/upload</code> <br>
+purpose : Upload image to server, path uploaded file <code>/public</code> <br>
+request method <code>POST</code> <br>
 request formdata : <code>{ file: the file }</code>
 
-- <code>/createProduct</code>
-purpose : Create new product
-request method <code>POST</code>
+- <code>/createProduct</code> <br>
+purpose : Create new product <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, name_product, price_product, stock_product, stock_unit, image_product, category_product }</code>
 
-- <code>/removeFile</code>
-purpose : Remove file image from server
-request method <code>POST</code>
+- <code>/removeFile</code> <br>
+purpose : Remove file image from server <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, image_product }</code>
 
-- <code>/deleteProduct</code>
-purpose : remove product from table Products
-request method <code>POST</code>
+- <code>/deleteProduct</code> <br>
+purpose : remove product from table Products <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, id_product, name_product, price_product, stock_product, stock_unit, image_product, category_product }</code>
 
 
-- <code>/updateProduct</code>
-purpose : update product from table Products
-request method <code>POST</code>
+- <code>/updateProduct</code> <br>
+purpose : update product from table Products <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, id_product,  }</code>
 
-- <code>/categorys</code>
-purpose : Get all categorys from table Categorys
-request method <code>POST</code>
+- <code>/categorys</code> <br>
+purpose : Get all categorys from table Categorys <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx }</code>
 
-- <code>/createCategory</code>
-purpose : Create new category
-request method <code>POST</code>
+- <code>/createCategory</code> <br>
+purpose : Create new category <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, name_category }</code>
 
-- <code>/deleteCategory</code>
-purpose : Remove category from table Categorys
-request method <code>POST</code>
+- <code>/deleteCategory</code> <br>
+purpose : Remove category from table Categorys <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, id_category }</code>
 
-- <code>/setUncategorys</code>
-purpose : Set name category product to uncategorys
-request method <code>POST</code>
+- <code>/setUncategorys</code> <br>
+purpose : Set name category product to uncategorys <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, name_category }</code>
 
-- <code>/updateCategory</code>
-purpose : Update the category
-request method <code>POST</code>
+- <code>/updateCategory</code> <br>
+purpose : Update the category <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, id_category, category }</code>
 
-- <code>/search</code>
-purpose : Get products by keyword and category product
-request method <code>POST</code>
+- <code>/search</code> <br>
+purpose : Get products by keyword and category product <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, keyword, category_product }</code>
 
-- <code>/changeName</code>
-purpose : Update name user
-request method <code>POST</code>
+- <code>/changeName</code> <br>
+purpose : Update name user <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, newName }</code>
 
-- <code>/changePassword</code>
-purpose : Change password user
-request method <code>POST</code>
+- <code>/changePassword</code> <br>
+purpose : Change password user <br>
+request method <code>POST</code> <br>
 request body : <code>{ TOKEN: xxx, newPassword }</code>
 
 ### Example response 
 <code>
-   {
-      "status": 200,
+   {<br>
+      "status": 200, 
       "message": "success",
       "results": {
          "fullname": "Sandhika Galih",
