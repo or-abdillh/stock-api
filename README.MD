@@ -114,8 +114,7 @@ request method <code>POST</code> <br/>
 request body : <code>{ TOKEN: xxx, newPassword }</code>
 
 ### Example response 
-<code>
-'''json
+'''yaml
     {
       "status": 200, 
       "message": "success",
@@ -126,7 +125,6 @@ request body : <code>{ TOKEN: xxx, newPassword }</code>
       }
    }
 '''   
-</code>
 
 ### Structure Tables
 
