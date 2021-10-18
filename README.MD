@@ -16,12 +16,12 @@ Built with Node JS, Express JS and MySql
 - nodemon 2.0.13
 
 ### Run server
-This application running on PORT 3000
+This application running on PORT 8080
 - <code>cd stock-api && npm start</code>
 <img src="./public/running-server.jpg" width="100%">
 
 ### Hostname & Endpoint API
-- HOSTNAME : <code>http://localhost:3000/</code>
+- HOSTNAME : <code>http://localhost:8080/</code>
 
 ##### endpoint
 - <code>/auth</code> <br/> 
