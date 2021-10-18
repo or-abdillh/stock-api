@@ -18,6 +18,7 @@ Built with Node JS, Express JS and MySql
 ### Run server
 This application running on PORT 3000
 - <code>cd stock-api && npm start</code>
+<img src="./public/running-server.jpg" width="100%">
 
 ### Hostname & Endpoint API
 - HOSTNAME : <code>http://localhost:3000/</code>
@@ -114,7 +115,7 @@ request method <code>POST</code> <br/>
 request body : <code>{ TOKEN: xxx, newPassword }</code>
 
 ### Example response 
-<code>
+<co>
     {
       "status": 200, 
       "message": "success",
