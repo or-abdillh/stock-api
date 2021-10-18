@@ -115,7 +115,8 @@ request body : <code>{ TOKEN: xxx, newPassword }</code>
 
 ### Example response 
 <code>
-    <br/> 
+'''json
+    {
       "status": 200, 
       "message": "success",
       "results": {
@@ -124,6 +125,7 @@ request body : <code>{ TOKEN: xxx, newPassword }</code>
          "categorys": "5"
       }
    }
+'''   
 </code>
 
 ### Structure Tables
