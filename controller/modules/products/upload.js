@@ -24,7 +24,7 @@ const upload = (req, res) => {
             response.serverError('Something wrong', res);
         }
         // returing the response with file path and name
-        response.success({ path: `http://${req.hostname}:8080/public/${nameFile}` }, res);
+        response.success({ path: `http://${req.headers.host}/public/${nameFile}` }, res);
    });
 }
 
