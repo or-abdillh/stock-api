@@ -17,7 +17,7 @@ module.exports = (app) => {
    app.route('/logout').get(controller.logout);
    
    //Get profile information
-   app.route('/profile').post(controller.getProfile);
+   app.route('/profile').get(controller.getProfile);
    
    //Get All Products
    app.route('/products').post(controller.getProducts);

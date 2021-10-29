@@ -6,15 +6,16 @@ var tokenValidation = require('../../../utils/tokenValidation.js');
 
 //Get profile 
 const getProfile = (req, res) => {
-   //Get data from body
-   const body = {
-      TOKEN: req.body.TOKEN
+   //Get TOKEN from header
+   
+   const headers = {
+      TOKEN: req.headers.token
    }
    
    //Create method for query
    const queryProfile = token => {
       //Query SQL
-      const sql = `SELECT fullname FROM User WHERE token = "${body.TOKEN}"; 
+      const sql = `SELECT fullname FROM User WHERE token = "${headers.TOKEN}"; 
          SELECT id_product FROM Products; SELECT id_category FROM Categorys`;
       
       //Validation
@@ -35,7 +36,7 @@ const getProfile = (req, res) => {
    }
    
    //call tokenValidation()
-   tokenValidation(connection, body, queryProfile);
+   tokenValidation(connection, headers, queryProfile);
 }
 
 module.exports = getProfile;

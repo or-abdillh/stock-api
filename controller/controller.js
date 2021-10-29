@@ -3,6 +3,7 @@
 const response = require('../response/response.js');
 //INDEX
 const index = (req, res) => {
+   console.log(req.headers)
    response.success('API Sukses berjalan dengan baik', res)
 }
 
