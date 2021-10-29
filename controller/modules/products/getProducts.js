@@ -6,10 +6,10 @@ var tokenValidation = require('../../../utils/tokenValidation.js');
 
 //Get product 
 const getProducts = (req, res) => {
-   //Get data from body
-   const body = {
-      TOKEN: req.body.TOKEN
-   }
+   //Get token from headers
+   const headers = {
+      TOKEN: req.headers.token
+   };
    
    //Create method for query
    const queryProducts = token => {
@@ -29,7 +29,7 @@ const getProducts = (req, res) => {
    }
    
    //call tokenValidation()
-   tokenValidation(connection, body, queryProducts);
+   tokenValidation(connection, headers, queryProducts);
 }
 
 module.exports = getProducts;
