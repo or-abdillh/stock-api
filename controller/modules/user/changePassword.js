@@ -7,12 +7,14 @@ var md5 = require('md5');
 var tokenValidation = require('../../../utils/tokenValidation.js');
 
 const changePassword = (req, res) => {
-   //Create body and get data
-   const body = { TOKEN: req.body.TOKEN };
+   //Get data from body
    const newPassword = md5(req.body.new_password);
    
+   //Get token from headers
+   const headers = { TOKEN: req.headers.token };
+   
    //Create sql 
-   const sql = `UPDATE User SET password = "${newPassword}" WHERE token = "${body.TOKEN}"`;
+   const sql = `UPDATE User SET password = "${newPassword}" WHERE token = "${headers.TOKEN}"`;
    
    const change = token => {
       //token valid
@@ -21,10 +23,10 @@ const changePassword = (req, res) => {
             if (err) response.serverError(err, res);
             else response.success('Success to change password', res);
          })
-      } else response.forbidden('TOKEN invalid');
+      } else response.forbidden('TOKEN invalid', res);
    }
    
-   tokenValidation(connection, body, change);
+   tokenValidation(connection, headers, change);
 }
 
 module.exports = changePassword;

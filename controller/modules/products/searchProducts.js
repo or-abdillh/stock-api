@@ -7,8 +7,8 @@ var response = require('../../../response/response.js');
 var tokenValidation = require('../../../utils/tokenValidation.js');
 
 const searchProducts = (req, res) => {
-   //Get TOKEN
-   const body = { TOKEN: req.body.TOKEN };
+   //Get TOKEN from headers
+   const headers = { TOKEN: req.headers.token };
    
    //Get keyword and category product
    const keyword = req.body.keyword;
@@ -30,7 +30,7 @@ const searchProducts = (req, res) => {
       } else response.forbidden('TOKEN invalid', res);
    }
    
-   tokenValidation(connection, body, search);
+   tokenValidation(connection, headers, search);
 }
 
 module.exports = searchProducts;
