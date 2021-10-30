@@ -15,8 +15,7 @@ const getCategorys = (req, res) => {
          connection.query(sql, (err, rows, fields) => {
             if (err) response.serverError(err, res);
             else {
-               if (rows.length === 0) response.success('Empty record given', res);
-               else response.success(rows, res);
+               response.success(rows, res);
             }
          })
       } else response.forbidden('TOKEN invalid', res);

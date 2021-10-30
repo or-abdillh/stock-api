@@ -5,10 +5,9 @@ var tokenValidation = require('../../../utils/tokenValidation.js');
 
 const deleteCategory = (req, res) => {
    //Get TOKEN
-   const body = { TOKEN : req.body.TOKEN };
-   
+   const headers = { TOKEN : req.headers.token };
    //Get data
-   const id_category = req.body.id_category
+   const id_category = req.body.id_category;
    
    //Create SQL
    const sql = `DELETE FROM Categorys WHERE id_category = ${id_category}`;
@@ -25,7 +24,7 @@ const deleteCategory = (req, res) => {
       } else response.forbidden('TOKEN invalid', res);
    }
    
-   tokenValidation(connection, body, del);
+   tokenValidation(connection, headers, del);
 }
 
 module.exports = deleteCategory;
