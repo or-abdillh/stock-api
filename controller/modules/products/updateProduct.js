@@ -5,7 +5,6 @@ var tokenValidation = require('../../../utils/tokenValidation.js');
 
 const updateProduct = (req, res) => {
    //Get data from body
-   const TOKEN = req.body.TOKEN;
    const id_product = req.body.id_product;
    const name_product = req.body.name_product;
    const price_product = req.body.price_product;
@@ -14,6 +13,9 @@ const updateProduct = (req, res) => {
    const category_product = req.body.category_product;
    const stock_unit = req.body.stock_unit;
    const last_modified = new Date().getTime();
+   
+   //Get Token from headers
+   const TOKEN = req.headers.token;
    
    //Create sql
    const sql = `UPDATE Products SET name_product = "${name_product}",
@@ -34,7 +36,7 @@ const updateProduct = (req, res) => {
       }
    }
    
-   tokenValidation(connection, { TOKEN: TOKEN }, update);
+   tokenValidation(connection, { TOKEN }, update);
 }
 
 module.exports = updateProduct
