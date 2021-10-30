@@ -4,8 +4,10 @@ var response = require('../../../response/response.js');
 var tokenValidation = require('../../../utils/tokenValidation.js');
 
 const setUncategorys = (req, res) => {
-   //Get body
-   const body = { TOKEN: req.body.TOKEN };
+   //Get token from headers
+   const headers = { TOKEN: req.headers.token };
+   
+   //Get data from body
    const category = req.body.category;
    
    // create sql
@@ -21,7 +23,7 @@ const setUncategorys = (req, res) => {
       } else response.forbidden('TOKEN Invalid', res);
    }
    
-   tokenValidation(connection, body, uncategorys)
+   tokenValidation(connection, headers, uncategorys)
 }
 
 module.exports = setUncategorys
