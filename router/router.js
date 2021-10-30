@@ -32,7 +32,7 @@ module.exports = (app) => {
    app.route('/removeFile').delete(controller.remove);
    
    //Delete product from table Products
-   app.route('/deleteProduct').post(controller.deleteProduct);
+   app.route('/deleteProduct').delete(controller.deleteProduct);
    
    //Update product from table Products
    app.route('/updateProduct').post(controller.updateProduct);

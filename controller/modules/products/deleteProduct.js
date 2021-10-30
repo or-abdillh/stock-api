@@ -16,7 +16,8 @@ const removeFile = file => {
 //Delete product
 const deleteProduct = (req, res) => {
    //Get primary key, TOKEN, and name file
-   const body = { TOKEN: req.body.TOKEN };
+   const headers = { TOKEN: req.headers.token };
+   
    const key = req.body.id_product;
    const path = req.body.image_product;
    
@@ -44,7 +45,7 @@ const deleteProduct = (req, res) => {
       } else response.forbidden('TOKEN invalid', res);
    }
    
-   tokenValidation(connection, body, del);
+   tokenValidation(connection, headers, del);
 }
 
 module.exports = deleteProduct;
