@@ -6,11 +6,11 @@ var tokenValidation = require('../../../utils/tokenValidation.js');
 
 //Create new product 
 const createProduct = (req, res) => {
-   //Get token from body
-   const body = {
-      TOKEN: req.body.TOKEN
+   //Get token from headers
+   const headers = {
+      TOKEN: req.headers.token
    }
-   
+   console.log(headers)
    // get field table
    const product = {
       name_product: req.body.name_product,
@@ -42,7 +42,7 @@ const createProduct = (req, res) => {
    }
    
    //call tokenValidation()
-   tokenValidation(connection, body, queryCreateProduct);
+   tokenValidation(connection, headers, queryCreateProduct);
 }
 
 module.exports = createProduct;
