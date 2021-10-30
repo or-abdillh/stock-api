@@ -4,10 +4,12 @@ var response = require('../../../response/response.js');
 var tokenValidation = require('../../../utils/tokenValidation.js');
 
 const updateCategory = (req, res) => {
-   //Create body
-   const body = { TOKEN: req.body.TOKEN };
+   //Get data from body
    const category = req.body.category;
    const key = req.body.id_category;
+   
+   //Get token from headers
+   const headers = { TOKEN: req.headers.token };
    
    //Create sql
    const sql = `UPDATE Categorys SET category = "${category}" WHERE id_category = "${key}"`;
@@ -21,7 +23,7 @@ const updateCategory = (req, res) => {
       } else response.forbidden('TOKEN invalid', res);
    }
    
-   tokenValidation(connection, body, update);
+   tokenValidation(connection, headers, update);
 }
 
 module.exports = updateCategory;
