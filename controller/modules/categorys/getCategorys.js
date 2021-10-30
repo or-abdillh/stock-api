@@ -5,7 +5,7 @@ var tokenValidation = require('../../../utils/tokenValidation.js');
 
 const getCategorys = (req, res) => {
    //Get TOKEN
-   const body = { TOKEN : req.body.TOKEN };
+   const headers = { TOKEN : req.headers.token };
    
    //Create SQL
    const sql = 'SELECT id_category, category FROM Categorys';
@@ -22,7 +22,7 @@ const getCategorys = (req, res) => {
       } else response.forbidden('TOKEN invalid', res);
    }
    
-   tokenValidation(connection, body, categorys);
+   tokenValidation(connection, headers, categorys);
 }
 
 module.exports = getCategorys;

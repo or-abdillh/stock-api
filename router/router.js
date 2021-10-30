@@ -38,7 +38,7 @@ module.exports = (app) => {
    app.route('/updateProduct').post(controller.updateProduct);
    
    //Get all category from Categorys table
-   app.route('/categorys').post(controller.getCategorys);
+   app.route('/categorys').get(controller.getCategorys);
    
    //Create new category
    app.route('/createCategory').post(controller.createCategory);
