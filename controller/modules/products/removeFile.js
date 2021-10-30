@@ -8,7 +8,7 @@ var connection = require('../../../connection/conn.js');
 const remove = (req, res) => {
    //Get name file
    const path = req.body.image_product;
-   const body = { TOKEN: req.body.TOKEN };
+   const headers = { TOKEN: req.headers.token };
    
    //Create name file
    //http://localhost:8080/public/product-1634004243760.png
@@ -24,7 +24,7 @@ const remove = (req, res) => {
       } else response.forbidden('TOKEN invalid', res);
    }
    
-   tokenValidation(connection, body, removeFile)
+   tokenValidation(connection, headers, removeFile)
 }
 
 module.exports = remove;
