@@ -10,9 +10,9 @@ const searchProducts = (req, res) => {
    //Get TOKEN from headers
    const headers = { TOKEN: req.headers.token };
    
-   //Get keyword and category product
-   const keyword = req.body.keyword;
-   const category_product = req.body.category_product;
+   //Get keyword and category product from params
+   const keyword = req.params.keyword;
+   const category_product = req.params.category;
    
    //Create SQL 
    let sql = `SELECT * FROM Products WHERE name_product LIKE "%${keyword}%"`;
