@@ -95,7 +95,7 @@ request method <code>POST</code> <br/>
 purpose : Update the category from table Categorys<br/> 
 request method <code>POST</code> <br/> 
 
-- <code>/search</code> <br/> 
+- <code>/search/:keyword/:category</code> <br/> 
 purpose : Get products by keyword and category product <br/> 
 request method <code>GET</code> <br/> 
 
@@ -111,12 +111,21 @@ request method <code>POST</code> <br/>
 Every time you make a request there must be a token in the request header as an identifier <br/>
 ```javascript
    import BASE_URL from '../BASE_URL.js'
+   
    //Create Headers to save the token
-   const headers = { headers: { token: 'Get the token from auth endpoint' } }
+   const headers = {
+      headers: { 
+         token: 'Get the token from auth endpoint' 
+      } 
+   }
    
    axios.get(`${BASE_URL}/products`, headers)
-      .then(res => console.log(res.data))
-      .catch(err => console.error(err))
+      .then(res => {
+         console.log(res.data)
+      })
+      .catch(err => {
+         console.error(err)
+      })
 ```
 
 ### Example response 
@@ -168,4 +177,4 @@ Every time you make a request there must be a token in the request header as an 
 - See my other projects on instagram [@or_abdillh](http://www.instagram.com/or_abdillh)
 
 [Oka R Abdillah ](http://github.com/or-abdillh) <br/> 
-Last edited on : 30/10/2021
+Last edited on : 31/10/2021

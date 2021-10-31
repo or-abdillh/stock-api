@@ -1,4 +1,4 @@
-
+Enter password: 
 -- MariaDB dump 10.19  Distrib 10.6.4-MariaDB, for Android (aarch64)
 --
 -- Host: localhost    Database: stock_app
@@ -37,7 +37,7 @@ CREATE TABLE `Categorys` (
 
 LOCK TABLES `Categorys` WRITE;
 /*!40000 ALTER TABLE `Categorys` DISABLE KEYS */;
-INSERT INTO `Categorys` VALUES (26,'Assets',1635568313059),(29,'UI',1635583995393);
+INSERT INTO `Categorys` VALUES (26,'Assets',1635568313059),(29,'Poster',1635583995393);
 /*!40000 ALTER TABLE `Categorys` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,7 +67,7 @@ CREATE TABLE `Products` (
 
 LOCK TABLES `Products` WRITE;
 /*!40000 ALTER TABLE `Products` DISABLE KEYS */;
-INSERT INTO `Products` VALUES (76,'Happy Cuan Figma UI Kits',567000,2,'http://localhost:8080/public/product-1635568922040.jpg','UI',1635585093337,'pcs');
+INSERT INTO `Products` VALUES (76,'Happy Cuan Figma UI Kits',567000,2,'http://localhost:8080/public/product-1635568922040.jpg','Poster',1635585093337,'pcs');
 /*!40000 ALTER TABLE `Products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +94,7 @@ CREATE TABLE `User` (
 
 LOCK TABLES `User` WRITE;
 /*!40000 ALTER TABLE `User` DISABLE KEYS */;
-INSERT INTO `User` VALUES ('admin','2ed37ee883101500cde58c9a5d157df5','Toko Rania','ha44f3rvqc9dqyun1c50gu488fcf7nrjj492kbaixejmkdwpjr5g43gro2h4cif5gwypfgft5x50gqzp8k7bsf0yitz8awqxvlko',1635586850952);
+INSERT INTO `User` VALUES ('admin','2ed37ee883101500cde58c9a5d157df5','Toko Rania','v3qc8mbe5xy9ax8irsjfl3cdcpyj93eiixxbb4nkidpp6gqct9351ddtxkngxygefmoxo4o8zgvw39ed8s3h7ii0btsodnmy2xus',1635649089785);
 /*!40000 ALTER TABLE `User` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -107,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-30 21:52:52
+-- Dump completed on 2021-10-31 11:43:24
