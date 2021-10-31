@@ -7,12 +7,15 @@ const updateCategory = (req, res) => {
    //Get data from body
    const category = req.body.category;
    const key = req.body.id_category;
+   const oldCategory = req.body.oldCategory;
    
    //Get token from headers
    const headers = { TOKEN: req.headers.token };
    
    //Create sql
-   const sql = `UPDATE Categorys SET category = "${category}" WHERE id_category = "${key}"`;
+   //After Update then UPDATE teh products use the old Category to new Category
+   const sql = `UPDATE Categorys SET category = "${category}" WHERE id_category = "${key}"; 
+      UPDATE Products SET category_product = "${category}" WHERE category_product = "${oldCategory}"`
    
    const update = token => {
       if (token) {
