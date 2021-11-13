@@ -15,12 +15,19 @@ const searchProducts = (req, res) => {
    const category_product = req.params.category;
    
    //Create SQL 
-   let sql = `SELECT * FROM Products WHERE name_product LIKE "%${keyword}%"`;
-   if ( category_product !== 'All' ) {
-      sql +=  ` AND category_product = "${category_product}"`;
+   let sql = `SELECT * FROM Products `;
+   if ( keyword === 'false' && category_product !== 'All') {
+      sql += ` WHERE category_product = "${category_product}"`
+   } 
+   else if ( keyword !== 'false' && category_product !== 'All' ) {
+      sql += ` WHERE name_product LIKE "%${keyword}%" AND category_product = "${category_product}"`
+   }
+   else if ( keyword !== 'false' && category_product === 'All') {
+      sql += ` WHERE name_product LIKE "%${keyword}%"`
    }
    
    const search = token => {
+      //console.log(sql)
       //Token valid 
       if (token) {
          connection.query(sql, (err, rows, fields) => {
