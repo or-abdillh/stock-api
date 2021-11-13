@@ -1,4 +1,4 @@
-Enter password: 
+
 -- MariaDB dump 10.19  Distrib 10.6.4-MariaDB, for Android (aarch64)
 --
 -- Host: localhost    Database: stock_app
